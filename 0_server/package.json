@@ -1,0 +1,29 @@
+{
+  "name": "ajax_final_project",
+  "version": "1.0.0",
+  "description": "final project of the course AJAX Next Level by SkillZone on PacktPub",
+  "main": "express.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ErickChezOCs/AJAX.git"
+  },
+  "keywords": [
+    "backend",
+    "frontend",
+    "Rest",
+    "API",
+    "AJAX"
+  ],
+  "author": "ErickChezOCs",
+  "license": "GPL-3.0-or-later",
+  "bugs": {
+    "url": "https://github.com/ErickChezOCs/AJAX/issues"
+  },
+  "homepage": "https://github.com/ErickChezOCs/AJAX#readme",
+  "dependencies": {
+    "express": "^4.18.2"
+  }
+}
