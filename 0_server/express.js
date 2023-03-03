@@ -15,7 +15,7 @@ const port = 4200;
 
  // E- créér un endpoint de test pour servir une page web par défaut
  app.get('/',(req,res,next) => {
-    res.send(`<h1>Notre serveur Nodejs est opérationnel</h1>`);
+    res.send(`<h1>Notre serveur Node.js est opérationnel</h1>`);
  });
 
  // F- lancer le serveur dans la console : node express
