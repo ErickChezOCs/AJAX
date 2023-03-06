@@ -18,6 +18,11 @@ const port = 4200;
 // G- créer des routes avec la méthode use de notre objet express app
 // ****************ROUTES***********//
 // app.use()
+// H - Pour pouvoir lire dans le corps des requête http, on doit appeller
+// la methode urlencoded de l'objet express app
+
+app.use(express.json())
+app.use(express.urlencoded());
 
 app.use('/api', dogRouter);
 
