@@ -1,0 +1,63 @@
+// on importe toujours express car le routeur est founit par express
+const express = require('express');
+const router = express.Router();
+
+// maintenant qu'on dispose de l'objet router on peut créer des endpoints pour notre application
+// la route de base est localhost:3000/api/
+
+
+// créons quelques données pour simuler un serveur
+let dogs = [
+    {
+        id:'1',
+        name: 'Skinny',
+        age: 1,
+        gender:'Female',
+        notes : 'broken front leg'
+    },
+    {
+        id:'2',
+        name: 'Charm',
+        age: 2,
+        gender:'Male',
+        notes : 'so much funny dog'
+    }
+];
+
+let cats = [
+    {
+        id:0,
+        name:'Micky',
+        age:'3',
+        gender:'Male',
+        notes:'the one you will always remenber'
+    },
+    {
+        id:3,
+        name:'Starry',
+        age:'3',
+        gender:'Female',
+        notes:'so bright like a star'
+    }
+];
+
+//***** GET DOGS */
+router.get('/dogs' , (req,res,next) => {
+    console.log(`GET request received at ${ new Date().toLocaleTimeString()}`);
+    res.json({dogs});
+})
+
+router.get('/cats',(req,res,next) => {
+    res.json({cats});
+});
+
+
+
+
+
+
+
+
+//  on doit exporter nos routes afin de les utiliser dans notre fichier principal 
+// l'objet router est le module à exporter
+module.exports = router;
