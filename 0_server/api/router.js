@@ -5,6 +5,8 @@ const router = express.Router();
 // maintenant qu'on dispose de l'objet router on peut créer des endpoints pour notre application
 // la route de base est localhost:3000/api/
 
+/********Appeler le controller qui contient le model ici */
+const catCtrl = require('../controllers/cat')
 
 // créons quelques données pour simuler un serveur
 let dogs = [
@@ -41,6 +43,8 @@ let cats = [
     }
 ];
 
+// créer une foncion de génration
+
 //***** GET DOGS */
 router.get('/dogs' , (req,res,next) => {
     console.log(`GET request received at ${ new Date().toLocaleTimeString()}`);
@@ -65,21 +69,7 @@ router.post('/dogs', (req,res,next) => {
     res.json({message:'POST request was successful', newDogAdded:newDog});
 })
 
-router.post('/cats', (req,res,next) => {
-    // par défault express empêche la lecture du corps d'une requête http
-    // le code ci-dessous log "undefined" si urlencoded n'est pas appelé sur l'objet express
-    console.log(req.body);
-    let newCat = {
-        id: req.body.id,
-        name: req.body.name,
-        age:req.body.age,
-        gender: req.body.gender,
-        notes:req.body.notes
-    };
-    cats.push(newCat);
-    console.log(`POST request received at ${ new Date().toLocaleTimeString()}`);
-    res.json({message:'POST request was successful', newCatAdded:newCat});
-})
+router.post('/cats', catCtrl.createCat);
 
 
 

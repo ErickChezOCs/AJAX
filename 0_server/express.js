@@ -1,3 +1,11 @@
+// avant A- se connecter à la base de données
+const dotenv = require('dotenv');
+const connectDB = require('./config/db');
+
+dotenv.config({path : './config/config.env'});
+connectDB();
+
+
 // A- importer express dans le fichier principal de l'application
 const express = require('express');
 const dogRouter = require('./api/router');
