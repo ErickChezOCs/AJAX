@@ -1,4 +1,4 @@
-const Cat = require('..models/Cat');
+const Cat = require('../models/Cat.js');
 
 exports.createCat =  (req,res,next) => {
     delete req.body.id;
