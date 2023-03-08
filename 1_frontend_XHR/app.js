@@ -4,6 +4,7 @@ import { AjaxLib } from "./api/ajax_lib.js";
 let para = document.getElementsByTagName('p')[0];
 let table = document.getElementById('tableResults');
 let getButton = document.getElementById('get');
+let postButton = document.getElementById('post');
 
 
 const SERVER_URL = 'http://127.0.0.1:4200/api';
@@ -37,7 +38,29 @@ let fetchDogs = () => {
            
             table.innerHTML = tableRows;
 
-});
-           
+});           
    
 };
+
+// *********** POST REQUEST *************/
+
+postButton.addEventListener('click', () => {
+    
+    let dog = {
+        id : 17,
+        name:"MickyMail",
+        age : 3,
+        gender:"Female",
+        notes :"So pretty little chose de rien du tout "
+    };
+    let xhr = new AjaxLib();
+    let url = SERVER_URL + '/dogs';
+    xhr.post(url,dog, (responseData) => {
+        fetchDogs();
+        para.className = 'post';
+        para.textContent = responseData.message;
+
+    })
+   
+    
+}); 

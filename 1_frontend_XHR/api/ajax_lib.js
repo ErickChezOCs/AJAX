@@ -18,6 +18,8 @@ function AjaxLib() {
         }
         this.xhr.send();
   }
+
+  
 // POST REQUEST
 this.post = (url, dog , callback) => {
     this.xhr.open("POST",url);

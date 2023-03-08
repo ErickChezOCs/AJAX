@@ -64,7 +64,7 @@ router.post('/dogs', (req,res,next) => {
     };
     dogs.push(newDog);
     console.log(`POST request received at ${ new Date().toLocaleTimeString()}`);
-    res.json({message:'POST request was successful', newDogAdded:newDog});
+    res.json({message:'POST request was successful!', newDogAdded:newDog});
 })
 
 
