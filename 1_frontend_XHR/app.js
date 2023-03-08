@@ -1,4 +1,4 @@
-let para = document.getElementsByClassName('p')[0];
+let para = document.getElementsByTagName('p')[0];
 let table = document.getElementById('tableResults');
 let getButton = document.getElementById('get');
 
@@ -9,6 +9,8 @@ const SERVER_URL = 'http://127.0.0.1:4200/api';
 
 getButton.addEventListener('click', () => {
     fetchDogs();
+    para.className = 'get';
+    para.textContent = "GET request was successful!";
 } );
 
 let fetchDogs = () => {

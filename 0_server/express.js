@@ -1,7 +1,7 @@
 // avant A- se connecter à la base de données
 const dotenv = require('dotenv');
 const connectDB = require('./config/db');
-const corsResolver = require('./config/cors');
+ 
 
 dotenv.config({path : './config/config.env'});
 connectDB();
@@ -10,6 +10,7 @@ connectDB();
 // A- importer express dans le fichier principal de l'application
 const express = require('express');
 const dogRouter = require('./api/router');
+const cors = require('cors');
 
 // B- initialiser notre application express dans le projet nodejs en créant un objet express appelé app
 // la constante app est donc un objet express qui nous permet d'invoquer toutes les méthodes des objets express
@@ -29,8 +30,10 @@ const port = 4200;
 // app.use()
 // H - Pour pouvoir lire dans le corps des requête http, on doit appeller
 // la methode urlencoded de l'objet express app
-
-app.use('/api', corsResolver);
+ 
+app.use(cors({
+  origin: "http://127.0.0.1:5500"
+}));
 app.use(express.json());
 app.use(express.urlencoded());
 app.use('/api', dogRouter);

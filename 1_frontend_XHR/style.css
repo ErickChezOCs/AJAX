@@ -17,6 +17,26 @@ p {
     text-align: center;
     margin-top: 2em;
 }
+
+p.get {
+    color: bisque;
+    background-color: #333;
+}
+
+p.post {
+    color: rgb(147, 201, 147);
+    background-color: #06630c;
+}
+
+p.put {
+    color: rgb(249, 246, 241);
+    background-color: #047380;
+}
+
+p.delete {
+    color: bisque;
+    background-color: #780303;
+}
 /******** BUTTONS  ******* */
 
 .wrapper {
