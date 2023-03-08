@@ -1,0 +1,70 @@
+/******** NAVBAR   ******* */
+
+nav {
+    display: block;
+    background-color: #333;
+    color: rgb(233,233,233);
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    line-height: 3em;
+    padding-left: 2em;
+    
+    margin-top: 2em;
+}
+
+p {
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: large;
+    text-align: center;
+    margin-top: 2em;
+}
+/******** BUTTONS  ******* */
+
+.wrapper {
+    text-align: center;
+    margin-top: 2em;
+}
+
+button {
+    color: #fff;
+    padding: 20px;
+    border: none;
+    border-radius: 5px;
+    margin: 5px;
+    transition: all 0.4s ease 0s;
+}
+
+button#get {
+    background-color:violet;
+}
+
+button#post {
+    background-color:#333;
+}
+
+button#put {
+    background-color:blue;
+}
+
+button#delete {
+    background-color:red;
+}
+ table {
+    width: 70%;
+    margin: auto;
+ }
+
+ th,td {
+ font-family: verdana;
+ text-align: left;
+ font-size: 12px;
+ padding: 10px;
+ }
+
+ th {
+    background-color: #7691ab;
+    color: white;
+ }
+
+ td {
+    background-color: rgb(238,238,238);
+ }

@@ -43,7 +43,7 @@ let cats = [
     }
 ];
 
-// créer une foncion de génration
+// créer une fonction de géneration
 
 //***** GET DOGS */
 router.get('/dogs' , (req,res,next) => {
@@ -51,9 +51,7 @@ router.get('/dogs' , (req,res,next) => {
     res.json({dogs});
 })
 
-router.get('/cats',(req,res,next) => {
-    res.json({cats});
-});
+
 
 //***** POST DOGS */
 router.post('/dogs', (req,res,next) => {
@@ -69,7 +67,43 @@ router.post('/dogs', (req,res,next) => {
     res.json({message:'POST request was successful', newDogAdded:newDog});
 })
 
+
+router.get('/cats',(catCtrl.getAllCats)); 
+
 router.post('/cats', catCtrl.createCat);
+
+//***** PUT/UPDATE DOGS */
+router.put('/dogs/:id',(req,res,next) => {
+    let dogId = req.params.id;
+
+    let updatedDog = {
+        id:dogId,
+        name: req.body.name,
+        age:req.body.age,
+        gender: req.body.gender,
+        notes:req.body.notes
+    }
+    // first step
+    let existingDog = dogs.find((dog) =>{
+        return dog.id === dogId;
+    });
+    // second step : replace the existing dog with the updatedDog
+    dogs.splice(dogs.indexOf(existingDog), 1, updatedDog);
+    //confirmation
+    console.log(`PUT request received at ${ new Date().toLocaleTimeString()}`);
+    res.json({message:'PUT request was successful'});
+})
+
+//***** DELETE DOGS */
+router.delete('/dogs/:id',(req,res,next) =>{
+    let dogId = req.params.id;
+    dogs = dogs.filter( (dog) =>{
+        return dog.id !== dogId;
+    })
+    //confirmation
+    console.log(`DELETE request received at ${ new Date().toLocaleTimeString()}`);
+    res.json({message:'DEL request was successful'});
+})
 
 
 

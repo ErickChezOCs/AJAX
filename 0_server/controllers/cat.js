@@ -6,6 +6,12 @@ exports.createCat =  (req,res,next) => {
         ...req.body
     })
     cat.save()
-    .then ( ()=> res.status(201).json({message : 'created and seved new cat!' }))
+    .then ( ()=> res.status(201).json({message : 'created and saved new cat!' }))
     .catch(error => res.status(400).json({error}));
 };
+
+exports.getAllCats =  (req,res,next) => {
+    Cat.find()
+      .then(cats => res.status(200).json(cats))
+      .catch(error => res.status(400).json({error}));
+  };
