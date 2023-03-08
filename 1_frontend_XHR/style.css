@@ -31,7 +31,10 @@ button {
     border-radius: 5px;
     margin: 5px;
     transition: all 0.4s ease 0s;
+    cursor: pointer;
 }
+
+
 
 button#get {
     background-color:violet;
@@ -64,11 +67,4 @@ button#delete {
  th {
     background-color: #7691ab;
     color: white;
- }
- tr {
-    
- }
-
- td {
-
  }

@@ -69,7 +69,6 @@ router.post('/dogs', (req,res,next) => {
 
 
 router.get('/cats',(catCtrl.getAllCats)); 
-
 router.post('/cats', catCtrl.createCat);
 
 //***** PUT/UPDATE DOGS */

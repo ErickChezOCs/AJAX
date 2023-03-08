@@ -1,6 +1,7 @@
 // avant A- se connecter à la base de données
 const dotenv = require('dotenv');
 const connectDB = require('./config/db');
+const corsResolver = require('./config/cors');
 
 dotenv.config({path : './config/config.env'});
 connectDB();
@@ -29,9 +30,9 @@ const port = 4200;
 // H - Pour pouvoir lire dans le corps des requête http, on doit appeller
 // la methode urlencoded de l'objet express app
 
-app.use(express.json())
+app.use('/api', corsResolver);
+app.use(express.json());
 app.use(express.urlencoded());
-
 app.use('/api', dogRouter);
 
 // ****************ROUTES***********//
