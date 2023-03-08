@@ -58,13 +58,17 @@ button#delete {
  text-align: left;
  font-size: 12px;
  padding: 10px;
- }
+ background-color: #7691ab; 
+}
 
  th {
     background-color: #7691ab;
     color: white;
  }
+ tr {
+    
+ }
 
  td {
-    background-color: rgb(238,238,238);
+
  }
