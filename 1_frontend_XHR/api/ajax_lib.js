@@ -2,7 +2,8 @@ function AjaxLib() {
  this.xhr = new XMLHttpRequest();
     // GET REQUEST 
   this.get = (url,callback) => {
-        this.xhr.open('GET',url);
+    // setting the third argument of xhr.open to false turns it into a synchronous function 
+        this.xhr.open('GET',url,false);
 
         this.xhr.onload = () => {
             if(this.xhr.status === 200) {

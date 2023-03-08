@@ -11,7 +11,10 @@ const SERVER_URL = 'http://127.0.0.1:4200/api';
 // *********** GET REQUEST *************/
 
 getButton.addEventListener('click', () => {
+    //turning fetchDogs into a synchronous function
     fetchDogs();
+    para.className = 'get';
+    para.textContent = "GET request was successful!";
 }); 
 
 let fetchDogs = () => {
@@ -31,8 +34,7 @@ let fetchDogs = () => {
                     </tr>
                   `;
             };
-            para.className = 'get';
-            para.textContent = "GET request was successful!";
+           
             table.innerHTML = tableRows;
 
 });
