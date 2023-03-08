@@ -12,9 +12,7 @@ const SERVER_URL = 'http://127.0.0.1:4200/api';
 
 getButton.addEventListener('click', () => {
     fetchDogs();
-    para.className = 'get';
-    para.textContent = "GET request was successful!";
-} );
+}); 
 
 let fetchDogs = () => {
     let url = SERVER_URL + '/dogs';
@@ -33,6 +31,11 @@ let fetchDogs = () => {
                     </tr>
                   `;
             };
+            para.className = 'get';
+            para.textContent = "GET request was successful!";
             table.innerHTML = tableRows;
-    });
-}
+
+});
+           
+   
+};

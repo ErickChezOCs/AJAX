@@ -18,7 +18,7 @@ function AjaxLib() {
         this.xhr.send();
   }
 // POST REQUEST
-this.post = (url, dog , callback) {
+this.post = (url, dog , callback) => {
     this.xhr.open("POST",url);
     this.xhr.setRequestHeader('Content-Type' , 'application/json');
     this.xhr.onload = () => {
@@ -27,9 +27,7 @@ this.post = (url, dog , callback) {
         callback(postRequestData);
     }
     this.xhr.send(JSON.stringify(dog))
-}
-
-
+};
 
 
 
