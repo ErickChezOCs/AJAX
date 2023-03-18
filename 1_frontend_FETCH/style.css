@@ -1,0 +1,96 @@
+/******** NAVBAR   ******* */
+
+nav {
+    display: block;
+    background-color: #333;
+    color: rgb(233,233,233);
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    line-height: 3em;
+    padding-left: 2em;
+    
+    margin-top: 2em;
+}
+
+p {
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: large;
+    text-align: center;
+    margin-top: 2em;
+}
+
+p.get {
+    color: bisque;
+    background-color: #333;
+}
+
+p.post {
+    color: rgb(147, 201, 147);
+    background-color: #06630c;
+}
+
+p.put {
+    color: rgb(249, 246, 241);
+    background-color: #047380;
+}
+
+p.delete {
+    color: bisque;
+    background-color: #780303;
+}
+/******** BUTTONS  ******* */
+
+.wrapper {
+    text-align: center;
+    margin-top: 2em;
+}
+
+button {
+    color: #fff;
+    padding: 20px;
+    border: none;
+    border-radius: 5px;
+    margin: 5px;
+    transition: all 0.4s ease 0s;
+    cursor: pointer;
+}
+
+button:hover {
+    background: rgb(21, 20, 21);
+    -webkit-box-shadow : 0px 5px 40px -10px rgb(0, 0, 0,0.95);
+    box-shadow: 0px 5px 40px -10px rgb(0, 0, 0,0.95);
+    transition: all 0.4s ease 0s; 
+}
+
+
+button#get {
+    background-color:violet;
+}
+
+button#post {
+    background-color:#333;
+}
+
+button#put {
+    background-color:blue;
+}
+
+button#delete {
+    background-color:red;
+}
+ table {
+    width: 70%;
+    margin: auto;
+ }
+
+ th,td {
+ font-family: verdana;
+ text-align: left;
+ font-size: 12px;
+ padding: 10px;
+ background-color: #7691ab; 
+}
+
+ th {
+    background-color: #7691ab;
+    color: white;
+ }
